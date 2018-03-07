@@ -2,29 +2,37 @@ package it.consoft.nameless.model;
 
 public class Moto {
 	private int id;
-	
+
 	private String marca;
-	
+
 	private String modello;
-	
+
 	private int cilindrata;
-	
+
 	private float cavalli;
-	
+
 	private float velocita;
-	
+
 	private String colore;
-	
+
 	private String tipo;
-	
+
+	@Override
+	public String toString() {
+		return "Moto [id=" + id + ", marca=" + marca + ", modello=" + modello + ", cilindrata=" + cilindrata
+				+ ", cavalli=" + cavalli + ", velocita=" + velocita + ", colore=" + colore + ", tipo=" + tipo
+				+ ", accelerazione=" + accelerazione + ", manovrabilita=" + manovrabilita + ", frenata=" + frenata
+				+ ", prezzo=" + prezzo + ", antifurto=" + antifurto + "]";
+	}
+
 	private float accelerazione;
-	
+
 	private float manovrabilita;
-	
+
 	private float frenata;
-	
+
 	private float prezzo;
-	
+
 	private boolean antifurto;
 
 	public int getId() {
