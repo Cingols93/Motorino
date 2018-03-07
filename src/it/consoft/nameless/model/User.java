@@ -13,22 +13,13 @@ public class User {
 	int id;
 	
 	private String username;
-	
 	private String password;
-	
 	private String nickname;
-	
 	private int eta;
-	
 	private String foto;
-	
 	private String dataIscrizione;
-	
 	private List<Moto> listMoto;
-	
-	private List<Carta>listCarta;
-	
-	
+	private int credito;
 
 	public int getId() {
 		return id;
@@ -85,8 +76,6 @@ public class User {
 	public void setDataIscrizione(String dataIscrizione) {
 		this.dataIscrizione = dataIscrizione;
 	}
-	
-	
 
 	public List<Moto> getListMoto() {
 		return listMoto;
@@ -96,26 +85,20 @@ public class User {
 		this.listMoto = listMoto;
 	}
 
-	public List<Carta> getListCarta() {
-		return listCarta;
+	public int getCredito() {
+		return credito;
 	}
 
-	public void setListCarta(List<Carta> listCarta) {
-		this.listCarta = listCarta;
+	public void setCredito(int credito) {
+		this.credito = credito;
 	}
 
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", nickname=" + nickname
-				+ ", eta=" + eta + ", foto=" + foto + ", dataIscrizione=" + dataIscrizione + "]";
+				+ ", eta=" + eta + ", foto=" + foto + ", dataIscrizione=" + dataIscrizione + ", credito=" + credito
+				+ "]";
 	}
 
 	
-	
-	
-	
-	
-	
-	
-
 }
