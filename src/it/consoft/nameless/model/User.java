@@ -1,14 +1,18 @@
 package it.consoft.nameless.model;
 
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 
 @Entity
+@Table(name="user")
 public class User {
 
 	@Id
@@ -33,6 +37,7 @@ public class User {
 	@Column(name = "dataIscrizione")
 	private String dataIscrizione;
  
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
 	private Set<Moto> listMoto;
 
 	@Column(name = "credito")
