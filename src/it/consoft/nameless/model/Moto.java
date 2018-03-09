@@ -7,26 +7,33 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="moto")
+@Table(name = "moto")
 public class Moto {
-	
-	@Id @GeneratedValue 
+
+	@Id
+	@GeneratedValue
 	@Column(name = "id")
 	private int id;
 
-	
+	@Column(name = "nome")
 	private String marca;
 
+	@Column(name="modello")
 	private String modello;
 
+	@Column(name="cilindrata")
 	private int cilindrata;
 
+	@Column(name="cavalli")
 	private float cavalli;
 
+	@Column(name="velocita")
 	private float velocita;
 
+	@Column(name="colore")
 	private String colore;
 
+	@Column(name="tipo")
 	private String tipo;
 
 	@Override

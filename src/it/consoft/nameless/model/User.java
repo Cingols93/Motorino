@@ -1,25 +1,42 @@
 package it.consoft.nameless.model;
-import java.util.List;
 
+import javax.persistence.Id;
+
+import java.util.Set;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 @Entity
 public class User {
-	
+
 	@Id
 	@GeneratedValue
 	int id;
-	
+
+	@Column(name = "username")
 	private String username;
+
+	@Column(name = "password")
 	private String password;
+
+	@Column(name = "nickname")
 	private String nickname;
+
+	@Column(name = "eta")
 	private int eta;
+
+	@Column(name = "foto")
 	private String foto;
+
+	@Column(name = "dataIscrizione")
 	private String dataIscrizione;
-	private List<Moto> listMoto;
-	private int credito;
+
+	private Set<Moto> listMoto;
+
+	@Column(name = "credito")
+	private float credito;
 
 	public int getId() {
 		return id;
@@ -77,19 +94,19 @@ public class User {
 		this.dataIscrizione = dataIscrizione;
 	}
 
-	public List<Moto> getListMoto() {
+	public Set<Moto> getListMoto() {
 		return listMoto;
 	}
 
-	public void setListMoto(List<Moto> listMoto) {
+	public void setListMoto(Set<Moto> listMoto) {
 		this.listMoto = listMoto;
 	}
 
-	public int getCredito() {
+	public float getCredito() {
 		return credito;
 	}
 
-	public void setCredito(int credito) {
+	public void setCredito(float credito) {
 		this.credito = credito;
 	}
 
@@ -100,5 +117,4 @@ public class User {
 				+ "]";
 	}
 
-	
 }
