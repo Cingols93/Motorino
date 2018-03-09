@@ -29,7 +29,7 @@
 						<input type="text" class="form-control" placeholder="Nickname" name="nickname">
 						<input type="text" class="form-control" placeholder="Nome" name="nome">
 						<input type="text" class="form-control" placeholder="Cognome" name="cognome">
-						<input type="text" class="form-control" placeholder="Etï¿½" name="eta">
+						<input type="text" class="form-control" placeholder="Età" name="eta">
 						<input type="text" class="form-control" placeholder="Indirizzo" name="indirizzo">
 						<input type="email" class="form-control" placeholder="E-mail" name="username">
 						<input type="password" class="form-control" placeholder="Password" name="password">
