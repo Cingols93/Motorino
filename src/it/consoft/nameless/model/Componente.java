@@ -13,7 +13,7 @@ public class Componente {
 	@Id
 	@GeneratedValue
 	@Column(name = "id")
-	int idcomp;
+	int id;
 
 	@Column(name = "nome")
 	private String nome;
@@ -40,11 +40,11 @@ public class Componente {
 	private boolean antifurto;
 
 	public int getIdcomp() {
-		return idcomp;
+		return id;
 	}
 
 	public void setIdcomp(int idcomp) {
-		this.idcomp = idcomp;
+		this.id = idcomp;
 	}
 
 	public String getNome() {
