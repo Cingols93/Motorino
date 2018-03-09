@@ -10,7 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 public class MotoComposta {
-
+ 
 	@Id
 	@GeneratedValue
 	@Column(name = "id")

@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "moto")
 public class Moto {
-
+ 
 	@Id
 	@GeneratedValue
 	@Column(name = "id")

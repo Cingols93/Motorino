@@ -32,7 +32,7 @@ public class User {
 
 	@Column(name = "dataIscrizione")
 	private String dataIscrizione;
-
+ 
 	private Set<Moto> listMoto;
 
 	@Column(name = "credito")
