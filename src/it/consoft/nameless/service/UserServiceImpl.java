@@ -14,13 +14,14 @@ import it.consoft.nameless.model.User;
 
 
 public class UserServiceImpl implements UserService {
+	
 	private static final Logger logger = Logger.getLogger(UserServiceImpl.class.getName());
 
 	@Override
 	public User saveUser(User user) {
 		
 		try {
-			URL url = new URL("http://localhost:8080/");
+			URL url = new URL("http://localhost:8080/user/saveContact");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
