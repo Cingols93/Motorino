@@ -28,6 +28,12 @@ public class User  {
 	@Column(name = "nickname")
 	private String nickname;
 
+	@Column(name = "nome")
+	private String nome;
+	
+	@Column(name="cognome")
+	private String cognome;
+	
 	@Column(name = "eta")
 	private int eta;
 
@@ -73,6 +79,22 @@ public class User  {
 
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCognome() {
+		return cognome;
+	}
+
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
 	}
 
 	public int getEta() {

@@ -8,12 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import it.consoft.nameless.entity.UserManager;
 import it.consoft.nameless.model.User;
-import it.consoft.nameless.service.UserService;
-import it.consoft.nameless.service.UserServiceImpl;
 
 @WebServlet("/registrati")
 public class RegisterServlet extends HttpServlet {
@@ -21,13 +18,6 @@ public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private static final Logger logger = Logger.getLogger(RegisterServlet.class.getName());
-
-	// @Override
-	// public void init() throws ServletException {
-	// HibernateDao.getSession();
-	// userService = new UserServiceImpl();
-	// super.init();
-	// }
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -51,8 +41,8 @@ public class RegisterServlet extends HttpServlet {
 		// String foto = request.getParameter("foto");
 		// String dataIscrizione = request.getParameter("dataIscrizione");
 		// String listaMoto = request.getParameter("listaMoto");
-		// String credito = request.getParameter("credito");
-
+		// String credito = request.getParameter("credito"); 
+		
 		// try {
 
 		User user = new User();
@@ -60,6 +50,7 @@ public class RegisterServlet extends HttpServlet {
 		user.setPassword(password);
 		user.setUsername(nickname);
 		user.setPassword(eta);
+		
 		// user.setUsername(foto);
 		// user.setPassword(dataIscrizione);
 		// user.setUsername(listaMoto);

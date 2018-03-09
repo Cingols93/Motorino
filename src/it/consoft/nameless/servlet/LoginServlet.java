@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import it.consoft.nameless.model.User;
-import it.consoft.nameless.service.UserService;
-import it.consoft.nameless.service.UserServiceImpl;
 
 /**
  * Servlet implementation class Login
@@ -20,7 +18,6 @@ import it.consoft.nameless.service.UserServiceImpl;
 @WebServlet("/Login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	UserService userService = new UserServiceImpl();
 
 	private static final Logger logger = Logger.getLogger(LoginServlet.class.getName());
 
@@ -48,19 +45,5 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
-		User user = new User();
-		user.setUsername(username);
-		user.setPassword(password);
-		User userDB = userService.getUserByUsernameAndPassword(username, password);
-		if(userDB != null) {
-		HttpSession session = request.getSession();
-		session.setAttribute("logged", true);
-		session.setAttribute("user", userDB);
-		logger.info("logged user: " + user.getUsername());
-		response.sendRedirect("listContacts");
-		}else {response.sendRedirect("loginerror=true");
-	}
 	}
 }

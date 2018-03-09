@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import it.consoft.nameless.model.User;
-import it.consoft.nameless.service.UserService;
-import it.consoft.nameless.service.UserServiceImpl;
 
 
 /**
@@ -21,7 +19,6 @@ import it.consoft.nameless.service.UserServiceImpl;
 @WebServlet("/Logout")
 public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	UserService userService = new UserServiceImpl();
 
 	private static final Logger logger = Logger.getLogger(LoginServlet.class.getName());
 
