@@ -5,14 +5,14 @@
 <html>
 <head>
 <%@ include file="head.jsp"%>
-<title>Registrati</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<%@ include file="navbar.jsp"%>
+<%@ include file="navbar.jsp"%>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 col-md-4 col-md-offset-4">
-				<h1 class="text-center login-title">Registrati a Nameless</h1>
+				<h1 class="text-center login-title">Collegati a Nameless</h1>
 				<div class="account-wall">
 					<script
 						src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -25,7 +25,7 @@
 					<div class="istruzioni-pic">
 						<p>Clicca l'immagine per impostare la foto profilo</p>
 					</div>
-					<form class="form-signin" method="POST" action="RegisterServlet">
+					<form class="form-signin" method="POST" action="registrati">
 						<input type="text" class="form-control" placeholder="Nickname" name="nickname">
 						<input type="text" class="form-control" placeholder="Nome" name="nome">
 						<input type="text" class="form-control" placeholder="Cognome" name="cognome">
@@ -42,21 +42,5 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		$("#profileImage").click(function(e) {
-			$("#imageUpload").click();
-		});
-
-		function fasterPreview(uploader) {
-			if (uploader.files && uploader.files[0]) {
-				$('#profileImage').attr('src',
-						window.URL.createObjectURL(uploader.files[0]));
-			}
-		}
-
-		$("#imageUpload").change(function() {
-			fasterPreview(this);
-		});
-	</script>
 </body>
 </html>

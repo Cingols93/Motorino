@@ -10,16 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import it.consoft.nameless.entity.UserManager;
 import it.consoft.nameless.model.User;
 import it.consoft.nameless.service.UserService;
 import it.consoft.nameless.service.UserServiceImpl;
 
-@WebServlet("/saveUser")
+@WebServlet("/registrati")
 public class RegisterServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-
-	UserService userService = new UserServiceImpl();
 
 	private static final Logger logger = Logger.getLogger(RegisterServlet.class.getName());
 
@@ -44,12 +43,15 @@ public class RegisterServlet extends HttpServlet {
 
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		String nome = request.getParameter("nome");
+		String cognome = request.getParameter("cognome");
 		String nickname = request.getParameter("nickname");
 		String eta = request.getParameter("eta");
-		String foto = request.getParameter("foto");
-		String dataIscrizione = request.getParameter("dataIscrizione");
-		String listaMoto = request.getParameter("listaMoto");
-		String credito = request.getParameter("credito");
+		String indirizzo = request.getParameter("indirizzo");
+		// String foto = request.getParameter("foto");
+		// String dataIscrizione = request.getParameter("dataIscrizione");
+		// String listaMoto = request.getParameter("listaMoto");
+		// String credito = request.getParameter("credito");
 
 		// try {
 
@@ -58,11 +60,13 @@ public class RegisterServlet extends HttpServlet {
 		user.setPassword(password);
 		user.setUsername(nickname);
 		user.setPassword(eta);
-		user.setUsername(foto);
-		user.setPassword(dataIscrizione);
-		user.setUsername(listaMoto);
-		user.setPassword(credito);
-		userService.saveUser(user);
+		// user.setUsername(foto);
+		// user.setPassword(dataIscrizione);
+		// user.setUsername(listaMoto);
+		user.setCredito(1000F);
+		
+		UserManager.saveUser(user);
+		
 		response.sendRedirect("login");
 		// } catch (Exception e) {
 		// logger.warning(e.getMessage());

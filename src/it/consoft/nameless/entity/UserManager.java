@@ -4,13 +4,25 @@ import it.consoft.nameless.model.User;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistryBuilder;
 
 public class UserManager {
 	
 	public static User saveUser(User user) {
+		SessionFactory sf = UserManager.generateSessionFactory();
 		
-		return null;
+		Session s = sf.openSession();
+		s.beginTransaction();
+
+		s.persist(user);
+
+		s.getTransaction().commit();
+		s.close();
+		
+		return user;
 	}
 
 	public static User getUserById(int id) {
@@ -32,6 +44,15 @@ public class UserManager {
 	public static User getUserByUsernameAndPassword(String username, String password) {
 		
 		return null;
+		
+	}
+	
+	private static SessionFactory generateSessionFactory() {
+		Configuration c = new Configuration().configure();
+		StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
+	            c.getProperties()).build();
+		
+		return c.buildSessionFactory(serviceRegistry);
 	}
 	
 	/*
