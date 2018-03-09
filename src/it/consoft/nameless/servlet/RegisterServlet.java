@@ -15,13 +15,13 @@ import it.consoft.nameless.service.UserService;
 import it.consoft.nameless.service.UserServiceImpl;
 
 @WebServlet("/saveUser")
-public class Register extends HttpServlet {
+public class RegisterServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	UserService userService = new UserServiceImpl();
 
-	private static final Logger logger = Logger.getLogger(Register.class.getName());
+	private static final Logger logger = Logger.getLogger(RegisterServlet.class.getName());
 
 	// @Override
 	// public void init() throws ServletException {

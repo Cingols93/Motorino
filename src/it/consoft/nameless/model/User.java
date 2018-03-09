@@ -13,11 +13,11 @@ import javax.persistence.GeneratedValue;
 
 @Entity
 @Table(name="user")
-public class User {
+public class User  {
 
 	@Id
 	@GeneratedValue
-	int id;
+	private int id;
 
 	@Column(name = "username")
 	private String username;

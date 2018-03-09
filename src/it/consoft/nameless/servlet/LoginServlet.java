@@ -18,16 +18,16 @@ import it.consoft.nameless.service.UserServiceImpl;
  * Servlet implementation class Login
  */
 @WebServlet("/Login")
-public class Login extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	UserService userService = new UserServiceImpl();
 
-	private static final Logger logger = Logger.getLogger(Login.class.getName());
+	private static final Logger logger = Logger.getLogger(LoginServlet.class.getName());
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Login() {
+	public LoginServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -53,7 +53,6 @@ public class Login extends HttpServlet {
 		User user = new User();
 		user.setUsername(username);
 		user.setPassword(password);
-		
 		User userDB = userService.getUserByUsernameAndPassword(username, password);
 		if(userDB != null) {
 		HttpSession session = request.getSession();

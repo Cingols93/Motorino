@@ -23,7 +23,7 @@ public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	UserService userService = new UserServiceImpl();
 
-	private static final Logger logger = Logger.getLogger(Login.class.getName());
+	private static final Logger logger = Logger.getLogger(LoginServlet.class.getName());
 
 	/**
 	 * @see HttpServlet#HttpServlet()

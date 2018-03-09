@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page import="it.consoft.nameless.servlet.RegisterServlet"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -21,17 +22,21 @@
 					</div>
 					<input id="imageUpload" type="file" name="profile_photo"
 						placeholder="Photo" required="" capture>
-						<div class="istruzioni-pic"><p>Clicca l'immagine per impostare la foto profilo </p></div>
-					<form class="form-signin">
-						<input type="text" class="form-control" placeholder="Nickname">
-						<input type="text" class="form-control" placeholder="Nome">
-						<input type="text" class="form-control" placeholder="Cognome">
-						<input type="text" class="form-control" placeholder="Età">
-						<input type="text" class="form-control" placeholder="Indirizzo">
-						<input type="text" class="form-control" placeholder="E-mail">
-						<input type="password" class="form-control" placeholder="Password">
-						<div class="reg-button"><button class="btn btn-lg btn-primary btn-block" type="submit">
-							Registrati</button></div>
+					<div class="istruzioni-pic">
+						<p>Clicca l'immagine per impostare la foto profilo</p>
+					</div>
+					<form class="form-signin" method="POST" action="RegisterServlet">
+						<input type="text" class="form-control" placeholder="Nickname" name="nickname">
+						<input type="text" class="form-control" placeholder="Nome" name="nome">
+						<input type="text" class="form-control" placeholder="Cognome" name="cognome">
+						<input type="text" class="form-control" placeholder="Età" name="eta">
+						<input type="text" class="form-control" placeholder="Indirizzo" name="indirizzo">
+						<input type="email" class="form-control" placeholder="E-mail" name="username">
+						<input type="password" class="form-control" placeholder="Password" name="password">
+						<div class="reg-button">
+							<button class="btn btn-lg btn-primary btn-block" type="submit">
+								Registrati</button>
+						</div>
 					</form>
 				</div>
 			</div>
