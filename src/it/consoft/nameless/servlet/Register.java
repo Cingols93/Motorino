@@ -44,12 +44,15 @@ public class Register extends HttpServlet {
 
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		String nome = request.getParameter("nome");
+		String cognome = request.getParameter("cognome");
 		String nickname = request.getParameter("nickname");
 		String eta = request.getParameter("eta");
-		String foto = request.getParameter("foto");
-		String dataIscrizione = request.getParameter("dataIscrizione");
-		String listaMoto = request.getParameter("listaMoto");
-		String credito = request.getParameter("credito");
+		String indirizzo = request.getParameter("indirizzo");
+		// String foto = request.getParameter("foto");
+		// String dataIscrizione = request.getParameter("dataIscrizione");
+		// String listaMoto = request.getParameter("listaMoto");
+		// String credito = request.getParameter("credito");
 
 		// try {
 
@@ -58,10 +61,10 @@ public class Register extends HttpServlet {
 		user.setPassword(password);
 		user.setUsername(nickname);
 		user.setPassword(eta);
-		user.setUsername(foto);
-		user.setPassword(dataIscrizione);
-		user.setUsername(listaMoto);
-		user.setPassword(credito);
+		//user.setUsername(foto);
+		//user.setPassword(dataIscrizione);
+		//user.setUsername(listaMoto);
+		//user.setPassword(credito);
 		userService.saveUser(user);
 		response.sendRedirect("login");
 		// } catch (Exception e) {
