@@ -1,4 +1,9 @@
 //Reusing bootstrap 3 panel CSS
+
+a {
+	color:#31304f !important;
+}
+
 .panel {
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0);
@@ -6,6 +11,10 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
 }   
+
+button.btn.btn-lg.btn-primary.btn-block {
+    background: #31304f;
+}
 
 @media screen and (min-width:768px){
     .navbar-brand-centered {
