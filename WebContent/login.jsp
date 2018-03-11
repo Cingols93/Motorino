@@ -1,7 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page import="it.consoft.nameless.servlet.LoginServlet"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <%@ include file="head.jsp"%>
@@ -17,15 +16,13 @@
 					<img class="profile-img"
 						src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
 						alt="">
-					<form class="form-signin" method="POST" action="LoginServlet">
-						<input type="text" class="form-control" placeholder="Email"
-							required autofocus> <input type="password"
-							class="form-control" placeholder="Password" required>
-						<button class="btn btn-lg btn-primary btn-block" type="submit">
-							Entra</button>
+					<form class="form-signin" method="POST" action="login">
+						<input type="text" class="form-control" placeholder="Email" name="email" required autofocus>
+						<input type="password" class="form-control" placeholder="Password" name="password" required>
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Entra</button>
 					</form>
 				</div>
-				<a href="#" class="text-center new-account">Crea un Account </a>
+				<a href="register" class="text-center new-account">Crea un Account </a>
 			</div>
 		</div>
 	</div>

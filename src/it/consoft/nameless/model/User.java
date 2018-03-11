@@ -12,37 +12,40 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 
 @Entity
-@Table(name="user")
-public class User  {
+@Table(name = "user")
+public class User {
 
 	@Id
 	@GeneratedValue
 	private int id;
 
-	@Column(name = "username")
-	private String username;
+	@Column(name = "email", unique = true)
+	private String email;
 
 	@Column(name = "password")
 	private String password;
 
-	@Column(name = "nickname")
+	@Column(name = "nickname", unique = true)
 	private String nickname;
 
 	@Column(name = "nome")
 	private String nome;
-	
-	@Column(name="cognome")
+
+	@Column(name = "cognome")
 	private String cognome;
-	
+
 	@Column(name = "eta")
 	private int eta;
+
+	@Column(name = "indirizzo")
+	private String indirizzo;
 
 	@Column(name = "foto")
 	private String foto;
 
 	@Column(name = "dataIscrizione")
 	private String dataIscrizione;
- 
+
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
 	private Set<Moto> listMoto;
 
@@ -57,12 +60,12 @@ public class User  {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {
@@ -105,6 +108,14 @@ public class User  {
 		this.eta = eta;
 	}
 
+	public String getIndirizzo() {
+		return indirizzo;
+	}
+
+	public void setIndirizzo(String indirizzo) {
+		this.indirizzo = indirizzo;
+	}
+
 	public String getFoto() {
 		return foto;
 	}
@@ -139,9 +150,9 @@ public class User  {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", nickname=" + nickname
-				+ ", eta=" + eta + ", foto=" + foto + ", dataIscrizione=" + dataIscrizione + ", credito=" + credito
-				+ "]";
+		return "User [id=" + id + ", email=" + email + ", password=" + password + ", nickname=" + nickname + ", nome=" + nome + ", cognome="
+				+ cognome + ", eta=" + eta + ", indirizzo=" + indirizzo + ", foto=" + foto + ", dataIscrizione=" + dataIscrizione
+				+ ", listMoto=" + listMoto + ", credito=" + credito + "]";
 	}
 
 }
