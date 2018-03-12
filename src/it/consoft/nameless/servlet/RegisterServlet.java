@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import it.consoft.nameless.entity.UserManager;
 import it.consoft.nameless.model.User;
 
-@WebServlet("/register")
+@WebServlet(value = "/register")
 public class RegisterServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -20,9 +20,10 @@ public class RegisterServlet extends HttpServlet {
 	private static final Logger logger = Logger.getLogger(RegisterServlet.class.getName());
 
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		User user = (User) request.getSession().getAttribute("user");
-		if (user != null) {
+		if (user == null) {
 			request.getRequestDispatcher("registrati.jsp").forward(request, response);
 		} else {
 			logger.info(user + " from session");
@@ -31,7 +32,8 @@ public class RegisterServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");

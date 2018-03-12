@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import it.consoft.nameless.entity.UserManager;
 import it.consoft.nameless.model.User;
 
-@WebServlet("/login")
+@WebServlet(value="/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

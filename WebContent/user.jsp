@@ -11,6 +11,7 @@
 	<%
 		User user = (User) session.getAttribute("user");
 		String nickname = user.getNickname();
+		
 	%>
 	<%@ include file="navbar.jsp"%>
 	<div class="container">
