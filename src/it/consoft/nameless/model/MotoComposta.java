@@ -16,8 +16,7 @@ import javax.persistence.Table;
 @Table(name="motocomposta")
 public class MotoComposta {
  
-	@Id
-	@GeneratedValue
+	
 	@Column(name = "id")
 	private int id;
 

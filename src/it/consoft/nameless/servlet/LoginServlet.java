@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import it.consoft.nameless.entity.MotoManager;
 import it.consoft.nameless.entity.UserManager;
 import it.consoft.nameless.model.User;
 
@@ -20,6 +21,7 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		User user = (User) request.getSession().getAttribute("user");
+		MotoManager.filler();
 		if (user != null)
 			logger.info(user + " from session");
 		request.getRequestDispatcher("login.jsp").forward(request, response);
