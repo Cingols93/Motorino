@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page import = "it.consoft.nameless.entity.MotoManager" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<% MotoManager.filler(); %>
 	<%@ include file="navbar.jsp"%>
 	<div class="container">
 		<div class="row">

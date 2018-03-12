@@ -2,6 +2,8 @@ package it.consoft.nameless.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -31,18 +33,12 @@ public class Moto {
 	private float velocita;
 
 	@Column(name="colore")
-	private String colore;
+	@Enumerated(EnumType.STRING)
+	private ColoreEnum colore;
 
 	@Column(name="tipo")
-	private String tipo;
-
-	@Override
-	public String toString() {
-		return "Moto [id=" + id + ", marca=" + marca + ", modello=" + modello + ", cilindrata=" + cilindrata
-				+ ", cavalli=" + cavalli + ", velocita=" + velocita + ", colore=" + colore + ", tipo=" + tipo
-				+ ", accelerazione=" + accelerazione + ", manovrabilita=" + manovrabilita + ", frenata=" + frenata
-				+ ", prezzo=" + prezzo + ", antifurto=" + antifurto + "]";
-	}
+	@Enumerated(EnumType.STRING)
+	private TipoMotoEnum tipo;
 
 	private float accelerazione;
 
@@ -102,19 +98,19 @@ public class Moto {
 		this.velocita = velocita;
 	}
 
-	public String getColore() {
+	public ColoreEnum getColore() {
 		return colore;
 	}
 
-	public void setColore(String colore) {
+	public void setColore(ColoreEnum colore) {
 		this.colore = colore;
 	}
 
-	public String getTipo() {
+	public TipoMotoEnum getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(String tipo) {
+	public void setTipo(TipoMotoEnum tipo) {
 		this.tipo = tipo;
 	}
 
@@ -157,4 +153,15 @@ public class Moto {
 	public void setAntifurto(boolean antifurto) {
 		this.antifurto = antifurto;
 	}
+
+	@Override
+	public String toString() {
+		return "Moto [id=" + id + ", marca=" + marca + ", modello=" + modello + ", cilindrata=" + cilindrata
+				+ ", cavalli=" + cavalli + ", velocita=" + velocita + ", colore=" + colore + ", tipo=" + tipo
+				+ ", accelerazione=" + accelerazione + ", manovrabilita=" + manovrabilita + ", frenata=" + frenata
+				+ ", prezzo=" + prezzo + ", antifurto=" + antifurto + "]";
+	}
+	
+	
+
 }

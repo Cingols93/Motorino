@@ -10,7 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/logout")
+import it.consoft.nameless.entity.UserManager;
+import it.consoft.nameless.model.User;
+
+@WebServlet(value="/logout")
 public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -18,6 +21,7 @@ public class Logout extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
+//		User user = (User)request.getSession().getAttribute("user");
 		session.invalidate();
 		response.sendRedirect("login.jsp");
 	}
