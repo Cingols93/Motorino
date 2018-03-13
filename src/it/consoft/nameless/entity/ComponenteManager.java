@@ -1,5 +1,8 @@
 package it.consoft.nameless.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -31,6 +34,18 @@ public class ComponenteManager {
 		return componente;
 
 	}
+	
+	public static Set<Componente> getAll() {
+		Set<Componente> setComponente = new HashSet<Componente>();
+		HibernateUtil.createSessionFactory();
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session s = sf.openSession();
+		for (Object c : s.createCriteria(Componente.class).list()) {
+			setComponente.add((Componente) c);
+		}
+
+		return setComponente;
+	}		
 
 	public static Componente update(Componente componente) {
 		return null;
