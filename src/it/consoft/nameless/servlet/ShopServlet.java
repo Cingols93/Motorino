@@ -45,7 +45,7 @@ public class ShopServlet extends HttpServlet {
 	
 	private String generateHTMLShop() {
 		String s = "";
-		Iterator iter = MotoManager.getAll().iterator();
+		Iterator<Moto> iter = MotoManager.getAll().iterator();
 		while (iter.hasNext()) {
 			Moto m = (Moto)iter.next();
 			s += "<div class=\"col-sm-3\"><div class=\"panelItem panelItem-primary\">";
