@@ -25,11 +25,11 @@ public class MotoComposta {
 	@Column(name = "id")
 	private int id;
 
-	@OneToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "userId")
+	@OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userID")
 	private User user;
 
-	@ManyToOne()
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "motoId")
 	private Moto moto;
 

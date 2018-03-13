@@ -8,8 +8,10 @@ import javax.persistence.Table;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
@@ -49,8 +51,7 @@ public class User {
 	@Column(name = "dataIscrizione")
 	private String dataIscrizione;
 
-	@OneToMany()
-	@JoinColumn(name = "motoList")
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<MotoComposta> listMoto;
 
 	@Column(name = "credito")
