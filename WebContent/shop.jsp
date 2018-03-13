@@ -14,9 +14,5 @@
 			<% out.write(request.getAttribute("listMoto").toString()); %>
 		</div>
 	</div>
-
-
-
-
 </body>
 </html>

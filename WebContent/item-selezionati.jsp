@@ -12,8 +12,8 @@
 				alt="User Pic">
 		</div>
 		<div class="span10">
-			<strong></strong><br> <span class="text-muted">User
-				level: Administrator</span>
+			<strong>Modello</strong><br> <span class="text-muted">
+				Marca</span>
 		</div>
 		<div class="span1 dropdown-user" data-for=".cyruxx">
 			<i class="icon-chevron-down text-muted"></i>
@@ -23,124 +23,131 @@
 		<table class="table table-hover">
 			<tbody>
 				<tr>
-					<td colspan="2">Marca</td>
+					<td colspan="2">Ammortizzatori</td>
 					<td><span class="pull-right">
-							<div class="dropdown">
-								<button class="btn btn-primary dropdown-toggle" type="button"
-									data-toggle="dropdown">
-									Dropdown Example <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">HTML</a></li>
-									<li><a href="#">CSS</a></li>
-									<li><a href="#">JavaScript</a></li>
-								</ul>
-							</div>
+							<div class="input-group">
+								<input type="TextBox" ID="datebox" Class="form-control" disabled></input>
+								<div class="input-group-btn">
+									<button type="button" class="btn dropdown-toggle"
+										data-toggle="dropdown">
+										<span class="caret"></span>
+									</button>
+									<ul id="demolist" class="dropdown-menu">
+										<li><a href="#">Gulp</a></li>
+									</ul>
+								</div>
 					</span></td>
 				</tr>
 				<tr>
-					<td colspan="2">Modello</td>
+					<td colspan="2">Carburatori</td>
 					<td><span class="pull-right">
-							<button class="btn-sel-meno" type="button" data-toggle="tooltip"
-								data-original-title="Edit this user">
-								<a href="#" class=""> <span
-									class="glyphicon glyphicon-minus"></span>
-								</a>
-							</button>
-							<button class="btn-sel-piu" type="button" data-toggle="tooltip"
-								data-original-title="Remove this user">
-								<a href="#" class=""> <span class="glyphicon glyphicon-plus"></span>
-								</a>
-							</button>
+							<div class="input-group">
+								<input type="TextBox" ID="datebox2" Class="form-control"
+									disabled></input>
+								<div class="input-group-btn">
+									<button type="button" class="btn dropdown-toggle"
+										data-toggle="dropdown">
+										<span class="caret"></span>
+									</button>
+									<ul id="demolist2" class="dropdown-menu">
+										<li><a href="#">Racing</a></li>
+									</ul>
+								</div>
 					</span></td>
 				</tr>
 				<tr>
-					<td colspan="2">Cilindrata</td>
+					<td colspan="2">Marmitte</td>
 					<td><span class="pull-right">
-							<button class="btn-sel-meno" type="button" data-toggle="tooltip"
-								data-original-title="Edit this user">
-								<a href="#" class=""> <span
-									class="glyphicon glyphicon-minus"></span>
-								</a>
-							</button>
-							<button class="btn-sel-piu" type="button" data-toggle="tooltip"
-								data-original-title="Remove this user">
-								<a href="#" class=""> <span class="glyphicon glyphicon-plus"></span>
-								</a>
-							</button>
+							<div class="input-group">
+								<input type="TextBox" ID="datebox3" Class="form-control"
+									disabled></input>
+								<div class="input-group-btn">
+									<button type="button" class="btn dropdown-toggle"
+										data-toggle="dropdown">
+										<span class="caret"></span>
+									</button>
+									<ul id="demolist3" class="dropdown-menu">
+										<li><a href="#">Racing</a></li>
+									</ul>
+								</div>
 					</span></td>
 				</tr>
 				<tr>
-					<td colspan="2">Cavalli</td>
+					<td colspan="2">Variatori</td>
 					<td><span class="pull-right">
-							<button class="btn-sel-meno" type="button" data-toggle="tooltip"
-								data-original-title="Edit this user">
-								<a href="#" class=""> <span
-									class="glyphicon glyphicon-minus"></span>
-								</a>
-							</button>
-							<button class="btn-sel-piu" type="button" data-toggle="tooltip"
-								data-original-title="Remove this user">
-								<a href="#" class=""> <span class="glyphicon glyphicon-plus"></span>
-								</a>
-							</button>
+							<div class="input-group">
+								<input type="TextBox" ID="datebox4" Class="form-control"
+									disabled></input>
+								<div class="input-group-btn">
+									<button type="button" class="btn dropdown-toggle"
+										data-toggle="dropdown">
+										<span class="caret"></span>
+									</button>
+									<ul id="demolist4" class="dropdown-menu">
+										<li><a href="#">Racing</a></li>
+									</ul>
+								</div>
 					</span></td>
 				</tr>
 				<tr>
-					<td colspan="2">Velocità</td>
+					<td colspan="2">Cilindri</td>
 					<td><span class="pull-right">
-							<button class="btn-sel-meno" type="button" data-toggle="tooltip"
-								data-original-title="Edit this user">
-								<a href="#" class=""> <span
-									class="glyphicon glyphicon-minus"></span>
-								</a>
-							</button>
-							<button class="btn-sel-piu" type="button" data-toggle="tooltip"
-								data-original-title="Remove this user">
-								<a href="#" class=""> <span class="glyphicon glyphicon-plus"></span>
-								</a>
-							</button>
+							<div class="input-group">
+								<input type="TextBox" ID="datebox5" Class="form-control"
+									disabled></input>
+								<div class="input-group-btn">
+									<button type="button" class="btn dropdown-toggle"
+										data-toggle="dropdown">
+										<span class="caret"></span>
+									</button>
+									<ul id="demolist5" class="dropdown-menu">
+										<li><a href="#">Racing</a></li>
+									</ul>
+								</div>
 					</span></td>
 				</tr>
 				<tr>
-					<td colspan="2">Colore</td>
+					<td colspan="2"></td>
 					<td><span class="pull-right">
-							<button class="btn-sel-meno" type="button" data-toggle="tooltip"
-								data-original-title="Edit this user">
-								<a href="#" class=""> <span
-									class="glyphicon glyphicon-minus"></span>
-								</a>
-							</button>
 							<button class="btn-sel-piu" type="button" data-toggle="tooltip"
-								data-original-title="Remove this user">
-								<a href="#" class=""> <span class="glyphicon glyphicon-plus"></span>
+								data-original-title="">
+								<a href="#" class=""> <span class="inviaBtn">Invia</span>
 								</a>
 							</button>
 					</span></td>
 				</tr>
+
 				<tr>
-					<td colspan="2">Tipo</td>
-					<td><span class="pull-right">
-							<button class="btn-sel-meno" type="button" data-toggle="tooltip"
-								data-original-title="Edit this user">
-								<a href="#" class=""> <span
-									class="glyphicon glyphicon-minus"></span>
-								</a>
-							</button>
-							<button class="btn-sel-piu" type="button" data-toggle="tooltip"
-								data-original-title="Remove this user">
-								<a href="#" class=""> <span class="glyphicon glyphicon-plus"></span>
-								</a>
-							</button>
-					</span></td>
+					<td colspan="2">Accelerazione : </td>
+					<td>Velocità : </td>
+				</tr>
+				<tr>
+					<td colspan="2">Manovrabilità : </td>
+					<td colspan="2">Frenata : </td>
+				</tr>
+				<tr>
+					<td colspan="2">Antifurto : </td>
+					<td style="text-align:right; text-transform:none;">Tot.: 1500 &euro;</td>
 				</tr>
 			</tbody>
 		</table>
 
 	</div>
 </div>
-</div>
-</div>
-
-
-</div>
+<script>
+	$('#demolist li a').on('click', function() {
+		$('#datebox').val($(this).html());
+	});
+	$('#demolist2 li a').on('click', function() {
+		$('#datebox2').val($(this).html());
+	});
+	$('#demolist3 li a').on('click', function() {
+		$('#datebox3').val($(this).html());
+	});
+	$('#demolist4 li a').on('click', function() {
+		$('#datebox4').val($(this).html());
+	});
+	$('#demolist5 li a').on('click', function() {
+		$('#datebox5').val($(this).html());
+	});
+</script>

@@ -3,6 +3,12 @@ Reusing bootstrap 3 panel CSS
 
 a {
 	color: #31304f !important;
+	text-decoration:none !important;
+}
+
+a:focus, a:hover {
+    color: #23527c;
+    text-decoration: none !important;
 }
 
 .panelItem-primary {
@@ -11,6 +17,18 @@ a {
 
 .panelItem-body {
 	padding: 15px;
+}
+
+.inviaBtn{
+	color:#fff;
+	text-transform:uppercase ;
+	font-size:14px;
+	text-decoration:none !important;
+}
+
+
+.inviaBtn a:hover{
+	text-decoration:none !important;
 }
 
 .panelItem-body img {

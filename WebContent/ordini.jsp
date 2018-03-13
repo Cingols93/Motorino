@@ -13,7 +13,7 @@
 	<div class="container">
 		<%@ include file="item-selezionati.jsp"%>
 	</div>
-
+	
 	<script type="text/javascript">
 		$(document)
 				.ready(
@@ -48,13 +48,7 @@
 									});
 
 							$('[data-toggle="tooltip"]').tooltip();
-
-							$('button').click(function(e) {
-								e.preventDefault();
-								alert("This is a demo.\n :-)");
-							});
 						});
 	</script>
-
 </body>
 </html>
