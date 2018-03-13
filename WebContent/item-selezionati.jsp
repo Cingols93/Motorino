@@ -34,6 +34,7 @@
 									</button>
 									<ul id="demolist" class="dropdown-menu">
 										<li><a href="#">Gulp</a></li>
+										<li><a  href="#">&#8203</a></li>
 									</ul>
 								</div>
 					</span></td>
@@ -51,6 +52,7 @@
 									</button>
 									<ul id="demolist2" class="dropdown-menu">
 										<li><a href="#">Racing</a></li>
+										<li><a  href="#">&#8203</a></li>
 									</ul>
 								</div>
 					</span></td>
@@ -68,6 +70,7 @@
 									</button>
 									<ul id="demolist3" class="dropdown-menu">
 										<li><a href="#">Racing</a></li>
+										<li><a  href="#">&#8203</a></li>
 									</ul>
 								</div>
 					</span></td>
@@ -85,6 +88,7 @@
 									</button>
 									<ul id="demolist4" class="dropdown-menu">
 										<li><a href="#">Racing</a></li>
+										<li><a  href="#">&#8203</a></li>
 									</ul>
 								</div>
 					</span></td>
@@ -102,6 +106,7 @@
 									</button>
 									<ul id="demolist5" class="dropdown-menu">
 										<li><a href="#">Racing</a></li>
+										<li><a  href="#">&#8203</a></li>
 									</ul>
 								</div>
 					</span></td>
@@ -128,6 +133,16 @@
 				<tr>
 					<td colspan="2">Antifurto : </td>
 					<td style="text-align:right; text-transform:none;">Tot.: 1500 &euro;</td>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+					<td><span class="pull-right">
+							<button style="background:#4294bb!important;" class="btn-sel-piu" type="button" data-toggle="tooltip"
+								data-original-title="">
+								<a href="#" class=""> <span class="inviaBtn">Compra</span>
+								</a>
+							</button>
+					</span></td>
 				</tr>
 			</tbody>
 		</table>

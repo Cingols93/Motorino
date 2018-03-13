@@ -120,6 +120,10 @@ a:focus, a:hover {
 	font-size: 12px;
 }
 
+.btn-sel-piu2 {
+	background-color: #000 !important;
+}
+
 button.btn.btn-lg.btn-primary.btn-block {
 	background: #31304f;
 }
