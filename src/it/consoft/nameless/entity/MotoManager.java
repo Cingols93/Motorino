@@ -87,9 +87,24 @@ public class MotoManager {
 		moto3.setAntifurto(false);
 		moto3.setPrezzo(4020F);
 		
+		Moto moto4 = new Moto();
+		moto4.setMarca("Derbi");
+		moto4.setModello("GPR 125");
+		moto4.setCilindrata(125);
+		moto4.setCavalli(14.95F);
+		moto4.setVelocita(120F);
+		moto4.setColore(ColoreEnum.NERO);
+		moto4.setTipo(TipoMotoEnum.SPORTIVA);
+		moto4.setAccelerazione(5F);
+		moto4.setManovrabilita(4F);
+		moto4.setFrenata(5F);
+		moto4.setAntifurto(false);
+		moto4.setPrezzo(4020F);
+		
 		saveMoto(moto1);
 		saveMoto(moto2);
 		saveMoto(moto3);
+		saveMoto(moto4);
 		
 	}
 

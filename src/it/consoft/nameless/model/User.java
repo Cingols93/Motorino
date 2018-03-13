@@ -1,6 +1,8 @@
 package it.consoft.nameless.model;
 
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -8,15 +10,16 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 @Table(name = "user")
 public class User {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", unique = true, nullable = false)
 	private int id;
 
 	@Column(name = "email", unique = true)
@@ -46,8 +49,9 @@ public class User {
 	@Column(name = "dataIscrizione")
 	private String dataIscrizione;
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
-	private Set<Moto> listMoto;
+	@OneToMany()
+	@JoinColumn(name = "motoList")
+	private Set<MotoComposta> listMoto;
 
 	@Column(name = "credito")
 	private float credito;
@@ -132,11 +136,11 @@ public class User {
 		this.dataIscrizione = dataIscrizione;
 	}
 
-	public Set<Moto> getListMoto() {
+	public Set<MotoComposta> getListMoto() {
 		return listMoto;
 	}
 
-	public void setListMoto(Set<Moto> listMoto) {
+	public void setListMoto(Set<MotoComposta> listMoto) {
 		this.listMoto = listMoto;
 	}
 
@@ -150,9 +154,9 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", email=" + email + ", password=" + password + ", nickname=" + nickname + ", nome=" + nome + ", cognome="
-				+ cognome + ", eta=" + eta + ", indirizzo=" + indirizzo + ", foto=" + foto + ", dataIscrizione=" + dataIscrizione
-				+ ", listMoto=" + listMoto + ", credito=" + credito + "]";
+		return "User [id=" + id + ", email=" + email + ", password=" + password + ", nickname=" + nickname + ", nome="
+				+ nome + ", cognome=" + cognome + ", eta=" + eta + ", indirizzo=" + indirizzo + ", foto=" + foto
+				+ ", dataIscrizione=" + dataIscrizione + ", listMoto=" + listMoto + ", credito=" + credito + "]";
 	}
 
 }
