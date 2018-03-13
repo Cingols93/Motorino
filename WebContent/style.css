@@ -5,6 +5,47 @@ a {
 	color: #31304f !important;
 }
 
+.panelItem-primary {
+	border-color: #cccccc !important;
+}
+
+.panelItem-body {
+	padding: 15px;
+}
+
+.panelItem-body img {
+	border-radius: 5px;
+	-moz-border-radius: 5px; /* firefox */
+	-webkit-border-radius: 5px;
+}
+
+.panelItem {
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.panelItem-heading {
+	padding: 10px 15px;
+	border-bottom: 1px solid transparent;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	background: #eee;
+}
+
+.panelItem-footer {
+	padding: 10px 15px;
+	background-color: #559edc;
+	border-top: 1px solid #ddd;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	color: #fff;
+}
+
+}
 .panel {
 	background-color: #FFFFFF;
 	border: 1px solid rgba(0, 0, 0, 0);
@@ -14,7 +55,51 @@ a {
 }
 
 .reg-button {
-    margin: 7px 0px;
+	margin: 7px 0px;
+}
+
+.btn-sel-meno {
+	background-color: #e7e7e7;
+	color: black;
+	border: none;
+	color: white;
+	padding: 4px 32px; text-align : center; text-decoration : none; display
+	: inline-block; font-size : 12px;
+	margin: 4px 2px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+}
+
+.glyphicon-plus {
+	color: #fff;
+}
+
+.glyphicon-minus {
+	color: #242531
+}
+
+.table tbody>tr>td, .table tfoot>tr>td {
+    vertical-align: middle !important;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.btn-sel-piu {
+	background-color: #6bc36f;
+	border: none;
+	color: white;
+	padding: 4px 32px; text-align : center; text-decoration : none; display
+	: inline-block; font-size : 12px;
+	margin: 4px 2px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
 }
 
 button.btn.btn-lg.btn-primary.btn-block {
@@ -147,7 +232,7 @@ CSS from v3 snipp
 
 .account-wall {
 	margin-top: 20px;
-	margin-bottom:50px;
+	margin-bottom: 50px;
 	padding: 40px 0px 20px 0px;
 	background-color: #f7f7f7;
 	-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
