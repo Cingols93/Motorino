@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ page import="it.consoft.nameless.model.User"%>
+<%@ page import="it.consoft.nameless.entity.MotoManager, java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +13,8 @@
 	<%
 		User user = (User) session.getAttribute("user");
 		String nickname = user.getNickname();
-		
 	%>
+
 	<%@ include file="navbar.jsp"%>
 	<div class="container">
 		<div class="well span8 offset2">
@@ -23,8 +25,8 @@
 						alt="User Pic">
 				</div>
 				<div class="span10">
-					<strong><%=nickname%></strong><br> <span class="text-muted">User level:
-						Administrator</span>
+					<strong><%=nickname%></strong><br> <span class="text-muted">User
+						level: Administrator</span>
 				</div>
 				<div class="span1 dropdown-user" data-for=".cyruxx">
 					<i class="icon-chevron-down text-muted"></i>
@@ -45,7 +47,8 @@
 								</div>
 								<div class="span6">
 									<strong>Cyruxx</strong><br>
-									<table class="table table-condensed table-responsive table-user-information">
+									<table
+										class="table table-condensed table-responsive table-user-information">
 										<tbody>
 											<tr>
 												<td>User level:</td>
@@ -69,17 +72,17 @@
 							</div>
 						</div>
 						<div class="panel-footer">
-							<button class="btn  btn-primary" type="button" data-toggle="tooltip"
-								data-original-title="Send message to user">
+							<button class="btn  btn-primary" type="button"
+								data-toggle="tooltip" data-original-title="Send message to user">
 								<i class="icon-envelope icon-white"></i>
 							</button>
 							<span class="pull-right">
-								<button class="btn btn-warning" type="button" data-toggle="tooltip"
-									data-original-title="Edit this user">
+								<button class="btn btn-warning" type="button"
+									data-toggle="tooltip" data-original-title="Edit this user">
 									<i class="icon-edit icon-white"></i>
 								</button>
-								<button class="btn btn-danger" type="button" data-toggle="tooltip"
-									data-original-title="Remove this user">
+								<button class="btn btn-danger" type="button"
+									data-toggle="tooltip" data-original-title="Remove this user">
 									<i class="icon-remove icon-white"></i>
 								</button>
 							</span>

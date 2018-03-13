@@ -1,5 +1,8 @@
 package it.consoft.nameless.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -10,7 +13,7 @@ import it.consoft.nameless.model.TipoMotoEnum;
 import it.consoft.nameless.util.HibernateUtil;
 
 public class MotoManager {
-	
+
 	public static Moto saveMoto(Moto moto) {
 		HibernateUtil.createSessionFactory();
 		SessionFactory sf = HibernateUtil.getSessionFactory();
@@ -28,11 +31,22 @@ public class MotoManager {
 		HibernateUtil.createSessionFactory();
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session s = sf.openSession();
-		moto = (Moto) s.createCriteria(Moto.class).add(Restrictions.eq("id", id))
-				.uniqueResult();
+		moto = (Moto) s.createCriteria(Moto.class).add(Restrictions.eq("id", id)).uniqueResult();
 		HibernateUtil.close();
 		return moto;
 
+	}
+
+	public static Set<Moto> getAll() {
+		Set<Moto> setMoto = new HashSet<Moto>();
+		HibernateUtil.createSessionFactory();
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session s = sf.openSession();
+		for (Object m : s.createCriteria(Moto.class).list()) {
+			setMoto.add((Moto) m);
+		}
+
+		return setMoto;
 	}
 
 	public static Moto update(Moto moto) {
@@ -43,7 +57,7 @@ public class MotoManager {
 
 		return null;
 	}
-	
+
 	public static void filler() {
 		Moto moto1 = new Moto();
 		moto1.setMarca("Ducati");
@@ -58,7 +72,7 @@ public class MotoManager {
 		moto1.setFrenata(8F);
 		moto1.setAntifurto(false);
 		moto1.setPrezzo(6000F);
-		
+
 		Moto moto2 = new Moto();
 		moto2.setMarca("BMW");
 		moto2.setModello("R GS 1200");
@@ -72,7 +86,7 @@ public class MotoManager {
 		moto2.setFrenata(8F);
 		moto2.setAntifurto(false);
 		moto2.setPrezzo(16950F);
-		
+
 		Moto moto3 = new Moto();
 		moto3.setMarca("Derbi");
 		moto3.setModello("GPR 125");
@@ -86,7 +100,7 @@ public class MotoManager {
 		moto3.setFrenata(5F);
 		moto3.setAntifurto(false);
 		moto3.setPrezzo(4020F);
-		
+
 		Moto moto4 = new Moto();
 		moto4.setMarca("Derbi");
 		moto4.setModello("GPR 125");
@@ -100,14 +114,12 @@ public class MotoManager {
 		moto4.setFrenata(5F);
 		moto4.setAntifurto(false);
 		moto4.setPrezzo(4020F);
-		
+
 		saveMoto(moto1);
 		saveMoto(moto2);
 		saveMoto(moto3);
 		saveMoto(moto4);
-		
+
 	}
 
 }
-
-
