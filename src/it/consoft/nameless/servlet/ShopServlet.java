@@ -15,14 +15,14 @@ import it.consoft.nameless.model.Moto;
 /**
  * Servlet implementation class MotoServlet
  */
-@WebServlet("/MotoServlet")
-public class MotoServlet extends HttpServlet {
+@WebServlet(value="/shop")
+public class ShopServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MotoServlet() {
+    public ShopServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,15 +31,15 @@ public class MotoServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String s = generateHTMLShop();
+		request.setAttribute("listMoto", s);
+		request.getRequestDispatcher("shop.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 	
@@ -48,6 +48,14 @@ public class MotoServlet extends HttpServlet {
 		Iterator iter = MotoManager.getAll().iterator();
 		while (iter.hasNext()) {
 			Moto m = (Moto)iter.next();
+			s += "<div class=\"col-sm-3\"><div class=\"panelItem panelItem-primary\">";
+			s += "<div class=\"panelItem-heading\">"+ m.getMarca() +" "+ m.getModello() +"</div>";
+			s += "<div class=\"panelItem-body\">";
+			s += "<img src=\"https://images.ctfassets.net/0icl5m35md89/4cGjVvpQQokGmGkAuKUUM2/80910703a834a97c79aee5cb601bb577/Panigale-V4-MY18-Red-02-Slider-Gallery-1920x1080.jpg\"\r\n" + 
+					"				class=\"img-responsive\" style=\"width: 100%\" alt=\"Image\">";
+			s += "</div>";
+			s += "<div class=\"panelItem-footer\">"+"$ "+ m.getPrezzo() +"</div>";
+			s += "</div></div>";
 		}
 		return s;
 	}

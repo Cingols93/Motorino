@@ -9,7 +9,7 @@
 <body>
 	<%@ include file="navbar.jsp"%>
 	<div class="container">
-		<%@ include file="item.jsp" %>
+		<% out.write(request.getAttribute("listMoto").toString()); %>
 		
 	</div>
 
