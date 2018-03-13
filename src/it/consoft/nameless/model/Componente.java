@@ -3,6 +3,7 @@ package it.consoft.nameless.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,9 +12,9 @@ import javax.persistence.Table;
 public class Componente {
 
 	@Id
-	@GeneratedValue
-	@Column(name = "id")
-	int id;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name = "id", unique=true, nullable=false)
+	private int id;
 
 	@Column(name = "nome")
 	private String nome;
@@ -39,12 +40,12 @@ public class Componente {
 	@Column(name = "antifurto")
 	private boolean antifurto;
 
-	public int getIdcomp() {
+	public int getId() {
 		return id;
 	}
 
-	public void setIdcomp(int idcomp) {
-		this.id = idcomp;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNome() {

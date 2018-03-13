@@ -22,18 +22,18 @@ public class MotoComposta {
 
 	@Id
 	@GeneratedValue
-	@Column(name = "id")
+	@Column(name = "id", unique = true, nullable = false)
 	private int id;
 
 	@OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userID")
+	@JoinColumn(name = "userID")
 	private User user;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "motoId")
 	private Moto moto;
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<Componente> listComponenti;
 
 	public int getId() {
