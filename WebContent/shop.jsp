@@ -15,22 +15,7 @@
 		</div>
 	</div>
 
- <script type="text/javascript">
-            $(document).ready(function(){
-                $contentLoadTriggered = false;
-                $("#content-box").scroll(function(){
-                    if($("#content-box").scrollTop() >= ($("body").height() - $("#content-box").height()) && $contentLoadTriggered == false)
-                    {
-                        $contentLoadTriggered = true;
-                        $.get("infinitContentServlet", function(data){
-                            $("#content-wrapper").append(data);
-                            $contentLoadTriggered = false;
-                        });
-                    }
 
-                });
-            });
-        </script>
 
 
 </body>
