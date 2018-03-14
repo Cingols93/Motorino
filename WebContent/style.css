@@ -6,6 +6,10 @@ a {
 	text-decoration:none !important;
 }
 
+div#navbar-brand-centered {
+    float: right;
+}
+
 a:focus, a:hover {
     color: #23527c;
     text-decoration: none !important;

@@ -9,7 +9,7 @@
 					class="icon-bar"></span>
 			</button>
 			<div>
-			<a class="navbar-brand navbar-brand-centered" href="index">Brand</a></div>
+			<a class="navbar-brand navbar-brand-centered" href="index.jsp">Brand</a></div>
 		</div>
 		<div class="collapse navbar-collapse" id="navbar-brand-centered">
 			<ul class="nav navbar-nav navbar-right">
