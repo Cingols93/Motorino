@@ -416,7 +416,7 @@ CSS from v3 snipp
 .smart-green input[type="text"], .smart-green input[type="email"],
 	.smart-green textarea, .smart-green select {
 	color: #555;
-	height: 30px;
+	height: 50px;
 	line-height: 15px;
 	width: 100%;
 	padding: 0px 0px 0px 10px;
@@ -427,6 +427,12 @@ CSS from v3 snipp
 	-webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
 	box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
 	font: normal 14px/14px Arial, Helvetica, sans-serif;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin: 20px auto !important;
 }
 
 .smart-green textarea {
