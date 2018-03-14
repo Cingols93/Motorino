@@ -1,3 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ include file="session.jsp"%>
+<%
+	if (session.getAttribute("user") == null) {
+		session.invalidate();
+		response.sendRedirect("login");
+	} else response.sendRedirect("user.jsp");
+%>
