@@ -71,10 +71,24 @@ a:focus, a:hover {
 }
 
 .btn-buy a {
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0px 0;
+}
+
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #559edc !important;
+    border-color: #559edc !important ;
+}
+
+.well {
+    padding: 25px 19px 19px 20px !important;
+}
+
+.panel-primary {
+    border-color: #559edc !important;
 }
 
 .panelItem-body img {

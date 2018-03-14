@@ -52,7 +52,7 @@ public class ShopServlet extends HttpServlet {
 		Iterator<Moto> iter = MotoManager.getAll().iterator();
 		while (iter.hasNext()) {
 			Moto m = (Moto) iter.next();
-			s += "<div class=\"col-sm-3\"><div class=\"panelItem panelItem-primary\">";
+			s += "<div class=\"col-xs-12 col-sm-6 col-lg-3\"><div class=\"panelItem panelItem-primary\">";
 			s += "<div class=\"panelItem-heading\">" + m.getMarca() + " " + m.getModello() + "</div>";
 			s += "<div class=\"panelItem-body\">";
 			s += "<img src=\"https://images.ctfassets.net/0icl5m35md89/4cGjVvpQQokGmGkAuKUUM2/80910703a834a97c79aee5cb601bb577/Panigale-V4-MY18-Red-02-Slider-Gallery-1920x1080.jpg\"\r\n"

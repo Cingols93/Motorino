@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ page import="it.consoft.nameless.model.User"%>
 <%@ page
 	import="it.consoft.nameless.entity.MotoManager, java.util.*, it.consoft.nameless.model.TipoUserEnum"%>
@@ -31,7 +32,8 @@
 						alt="User Pic">
 				</div>
 				<div class="span10">
-					<strong><%=nickname%></strong><br> <span class="text-muted">Livello utente: <%=role%></span>
+					<strong><%=nickname%></strong><br> <span class="text-muted">Livello
+						utente: <%=role%></span>
 				</div>
 				<div class="span1 dropdown-user" data-for=".cyruxx">
 					<i class="icon-chevron-down text-muted"></i>
@@ -52,7 +54,8 @@
 								</div>
 								<div class="span6">
 									<strong><%=nickname%></strong><br>
-									<table class="table table-condensed table-responsive table-user-information">
+									<table
+										class="table table-condensed table-responsive table-user-information">
 										<tbody>
 											<tr>
 												<td>Nome:</td>
@@ -72,7 +75,7 @@
 											</tr>
 											<tr>
 												<td>Registrato dal:</td>
-												<td><%=dataIscrizione%>></td>
+												<td><%=dataIscrizione%></td>
 											</tr>
 											<tr>
 												<td>Indirizzo:</td>
@@ -88,28 +91,55 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel-footer">
-							<button class="btn  btn-primary" type="button" data-toggle="tooltip"
-								data-original-title="Send message to user">
-								<i class="icon-envelope icon-white"></i>
-							</button>
-							<span class="pull-right">
-								<button class="btn btn-warning" type="button" data-toggle="tooltip"
-									data-original-title="Edit this user">
-									<i class="icon-edit icon-white"></i>
-								</button>
-								<button class="btn btn-danger" type="button" data-toggle="tooltip"
-									data-original-title="Remove this user">
-									<i class="icon-remove icon-white"></i>
-								</button>
-							</span>
-						</div>
+
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<div class="span8 offset2">
+			<h2 style="padding:10px 0 10px 20px;">Le tue Moto</h2>
+		</div>
+
+		<div class="well span8 offset2">
+			<div class="row-fluid user-row">
+				<div class="span1">
+					<img class="img-circle"
+						src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=50"
+						alt="User Pic">
+				</div>
+				<div class="span10">
+					<strong>Modello</strong><br> <span class="text-muted">
+					Marca</span>
+				</div>
+				<div class="span1 dropdown-user" data-for=".cyruxx">
+				</div>
+			</div>
+			<div class="row-fluid user-infos2 cyruxx">
+			<table class="table table-hover">
+			<tbody>
+				<tr>
+					<td colspan="2">Accelerazione : </td>
+					<td>Velocità : </td>
+				</tr>
+				<tr>
+					<td colspan="2">Manovrabilità : </td>
+					<td colspan="2">Frenata : </td>
+				</tr>
+				<tr>
+					<td colspan="2">Antifurto : </td>
+					<td style="text-align:right; text-transform:none;">Tot.: 1500 &euro;</td>
+				</tr>
+				
+			</tbody>
+		</table>
+				
 			</div>
 
 
 		</div>
+
+
 	</div>
 
 	<script type="text/javascript">
@@ -147,6 +177,7 @@
 
 							$('[data-toggle="tooltip"]').tooltip();
 						});
+		
 	</script>
 
 </body>
