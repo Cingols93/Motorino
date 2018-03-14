@@ -36,9 +36,9 @@ public class LoginServlet extends HttpServlet {
 		User user = UserManager.getUserByUsernameAndPassword(email, password);
 		if (user != null) {
 			request.getSession().setAttribute("user", user);
-			response.sendRedirect("user.jsp");
+			response.sendRedirect("user");
 		} else {
-			response.sendRedirect("support.jsp");
+			response.sendRedirect("register");
 		}
 	}
 }
