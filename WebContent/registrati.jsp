@@ -26,18 +26,20 @@
 					</div>
 					<form class="form-signin" method="POST" action="register">
 						<input type="text" class="form-control" placeholder="Nickname"
-							name="nickname"> <input type="text" class="form-control"
-							placeholder="Nome" name="nome"> <input type="text"
-							class="form-control" placeholder="Cognome" name="cognome">
-						<input type="text" class="form-control" placeholder="Età"
-							name="eta"> <input type="text" class="form-control"
-							placeholder="Indirizzo" name="indirizzo"> <input
-							type="email" class="form-control" placeholder="E-mail"
-							name="email"> <input type="password" class="form-control"
-							placeholder="Password" name="password">
+							name="nickname" required> <input type="text"
+							class="form-control" placeholder="Nome" name="nome" required>
+						<input type="text" class="form-control" placeholder="Cognome"
+							name="cognome" required> <input type="text"
+							class="form-control" placeholder="Età" name="eta" required>
+						<input type="text" class="form-control" placeholder="Indirizzo"
+							name="indirizzo" required> <input type="email"
+							class="form-control" placeholder="E-mail" name="email" required>
+						<input type="password" class="form-control" placeholder="Password"
+							name="password" required>
 						<div class="reg-button">
 							<button class="btn btn-lg btn-primary btn-block" type="submit">Registrati</button>
 						</div>
+					</form>
 					</form>
 				</div>
 			</div>
