@@ -40,7 +40,6 @@
 							<button class="btn btn-lg btn-primary btn-block" type="submit">Registrati</button>
 						</div>
 					</form>
-					</form>
 				</div>
 			</div>
 		</div>
