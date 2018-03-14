@@ -17,7 +17,7 @@
 				<label> <span>Nome :</span> <input id="name" type="text" name="name" placeholder="Nome" />
 				</label> <label> <span>Email :</span> <input id="email" type="email" name="email"
 					placeholder="Indirizzo Email" />
-				</label> <label> <span>Num. Telefonico :</span> <input id="Phone" type="tel" name="Phone"
+				</label> <label> <span>Num. Telefonico :</span> <input id="Phone" type="text" name="Phone"
 					placeholder="Num. Telefonico" />
 				</label> <label> <span>Titolo :</span> <input id="Subject" type="text" name="Subject"
 					placeholder="Titolo" />
