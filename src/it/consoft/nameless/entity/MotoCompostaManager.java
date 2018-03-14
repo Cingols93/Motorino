@@ -48,15 +48,12 @@ public class MotoCompostaManager {
 
 		return setMotoComposta;
 	}
-	
-	public static Set<MotoComposta> getAllUserMoto(User user){
-	
-		
+
+	public static Set<MotoComposta> getAllUserMoto(User user) {
+		Set<MotoComposta> setMotoComposta = new HashSet<MotoComposta>();
 
 		return setMotoComposta;
 	}
-	
-	
 
 	public static MotoComposta update(MotoComposta motocomposta) {
 		return null;
@@ -66,6 +63,5 @@ public class MotoCompostaManager {
 
 		return null;
 	}
-
 
 }

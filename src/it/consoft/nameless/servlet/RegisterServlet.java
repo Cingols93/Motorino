@@ -1,6 +1,8 @@
 package it.consoft.nameless.servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
@@ -10,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import it.consoft.nameless.entity.UserManager;
+import it.consoft.nameless.model.TipoUserEnum;
 import it.consoft.nameless.model.User;
 
 @WebServlet(value = "/register")
@@ -20,8 +23,7 @@ public class RegisterServlet extends HttpServlet {
 	private static final Logger logger = Logger.getLogger(RegisterServlet.class.getName());
 
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		User user = (User) request.getSession().getAttribute("user");
 		if (user == null) {
 			request.getRequestDispatcher("registrati.jsp").forward(request, response);
@@ -32,8 +34,7 @@ public class RegisterServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
@@ -42,6 +43,7 @@ public class RegisterServlet extends HttpServlet {
 		String nickname = request.getParameter("nickname");
 		String eta = request.getParameter("eta");
 		String indirizzo = request.getParameter("indirizzo");
+		String dataIscrizione = new SimpleDateFormat("dd-MM-yyyy").format(Calendar.getInstance().getTime());
 
 		User user = new User();
 
@@ -52,8 +54,9 @@ public class RegisterServlet extends HttpServlet {
 		user.setCognome(cognome);
 		user.setEta(Integer.parseInt(eta));
 		user.setIndirizzo(indirizzo);
-
+		user.setDataIscrizione(dataIscrizione);
 		user.setCredito(1000F);
+		user.setRole(TipoUserEnum.USER);
 
 		UserManager.saveUser(user);
 

@@ -57,6 +57,9 @@ public class User {
 	@Column(name = "credito")
 	private float credito;
 
+	@Column(name = "role")
+	private TipoUserEnum role;
+
 	public int getId() {
 		return id;
 	}
@@ -153,11 +156,19 @@ public class User {
 		this.credito = credito;
 	}
 
+	public TipoUserEnum getRole() {
+		return role;
+	}
+
+	public void setRole(TipoUserEnum role) {
+		this.role = role;
+	}
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", email=" + email + ", password=" + password + ", nickname=" + nickname + ", nome="
-				+ nome + ", cognome=" + cognome + ", eta=" + eta + ", indirizzo=" + indirizzo + ", foto=" + foto
-				+ ", dataIscrizione=" + dataIscrizione + ", listMoto=" + listMoto + ", credito=" + credito + "]";
+		return "User [id=" + id + ", email=" + email + ", password=" + password + ", nickname=" + nickname + ", nome=" + nome + ", cognome="
+				+ cognome + ", eta=" + eta + ", indirizzo=" + indirizzo + ", foto=" + foto + ", dataIscrizione=" + dataIscrizione
+				+ ", listMoto=" + listMoto + ", credito=" + credito + "]";
 	}
 
 }
