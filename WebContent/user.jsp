@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="it.consoft.nameless.model.User"%>
 <%@ page import="it.consoft.nameless.entity.MotoManager, java.util.*"%>
+<%@ include file="session.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +10,10 @@
 <title>Profilo</title>
 </head>
 <body>
-	<%@ include file="session.jsp"%>
 	<%
 		User user = (User) session.getAttribute("user");
 		String nickname = user.getNickname();
 	%>
-
 	<%@ include file="navbar.jsp"%>
 	<div class="container">
 		<div class="well span8 offset2">
