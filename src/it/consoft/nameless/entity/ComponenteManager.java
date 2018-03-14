@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 
 import it.consoft.nameless.model.Componente;
+import it.consoft.nameless.model.ComponenteEnum;
 import it.consoft.nameless.util.HibernateUtil;
 
 public class ComponenteManager {
@@ -59,8 +60,9 @@ public class ComponenteManager {
 	public static void filler() {
 		
 		Componente comp1 = new Componente();
-		comp1.setNome("Carburatore");
+		comp1.setNome("Carburatore 23 carati");
 		comp1.setMarca("Racing");
+		comp1.setTipo(ComponenteEnum.CARBURATORE);
 		comp1.setAntifurto(false);
 		comp1.setAccellerazione(2F);
 		comp1.setFrenata(2F);
@@ -69,8 +71,8 @@ public class ComponenteManager {
 		comp1.setPrezzo(116.51F);
 		
 		Componente comp2 = new Componente();
-		comp2.setNome("Ammortizzatore");
 		comp2.setMarca("Gulp");
+		comp2.setTipo(ComponenteEnum.AMMORTIZZATORE);
 		comp2.setAntifurto(false);
 		comp2.setAccellerazione(0F);
 		comp2.setFrenata(1F);
@@ -81,6 +83,7 @@ public class ComponenteManager {
 		Componente comp3 = new Componente();
 		comp3.setNome("VARIATORE 125/150cc ");
 		comp3.setMarca("Racing");
+		comp3.setTipo(ComponenteEnum.VARIATORE);
 		comp3.setAntifurto(false);
 		comp3.setAccellerazione(4F);
 		comp3.setFrenata(1.5F);
@@ -91,6 +94,7 @@ public class ComponenteManager {
 		Componente comp4 = new Componente();
 		comp4.setNome("Marmitta");
 		comp4.setMarca("Racing");
+		comp4.setTipo(ComponenteEnum.MARMITTA);
 		comp4.setAntifurto(false);
 		comp4.setAccellerazione(0F);
 		comp4.setFrenata(0F);
@@ -101,6 +105,7 @@ public class ComponenteManager {
 		Componente comp5 = new Componente();
 		comp5.setNome("125T-25 Cilindro 160cc 59mm");
 		comp5.setMarca("Racing");
+		comp5.setTipo(ComponenteEnum.CILINDRO);
 		comp5.setAntifurto(false);
 		comp5.setAccellerazione(3F);
 		comp5.setFrenata(1F);
