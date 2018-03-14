@@ -2,6 +2,8 @@ package it.consoft.nameless.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,6 +23,10 @@ public class Componente {
 
 	@Column(name = "marca")
 	private String marca;
+	
+	@Column(name = "tipo")
+	@Enumerated(EnumType.STRING)
+	private ComponenteEnum tipo; 
 
 	@Column(name = "velocita")
 	private float velocita;
@@ -111,5 +117,15 @@ public class Componente {
 	public void setAntifurto(boolean antifurto) {
 		this.antifurto = antifurto;
 	}
+
+	public ComponenteEnum getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(ComponenteEnum tipo) {
+		this.tipo = tipo;
+	}
+	
+	
 
 }
