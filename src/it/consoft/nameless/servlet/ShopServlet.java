@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import it.consoft.nameless.entity.MotoManager;
 import it.consoft.nameless.model.Moto;
+import it.consoft.nameless.model.MotoComposta;
+import it.consoft.nameless.model.User;
 
 /**
  * Servlet implementation class MotoServlet
@@ -44,7 +46,14 @@ public class ShopServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doGet(request, response);
+		Moto m = MotoManager.getMotoById(Integer.parseInt(request.getParameter("aggiungiMoto")));
+		User u = (User) request.getAttribute("user");
+		MotoComposta mc = new MotoComposta();
+		mc.setUser(u);
+		mc.setMoto(m);
+		u.addToCarrello(mc);
+		request.setAttribute("user", u);
+		response.sendRedirect("ordine");
 	}
 
 	private String generateHTMLShop() {
@@ -53,14 +62,17 @@ public class ShopServlet extends HttpServlet {
 		while (iter.hasNext()) {
 			Moto m = (Moto) iter.next();
 			s += "<div class=\"col-xs-12 col-sm-6 col-lg-3\"><div class=\"panelItem panelItem-primary\">";
+			s += "<form method=\"post\" action=\"ordine\"";
 			s += "<div class=\"panelItem-heading\">" + m.getMarca() + " " + m.getModello() + "</div>";
 			s += "<div class=\"panelItem-body\">";
 			s += "<img src=\"https://images.ctfassets.net/0icl5m35md89/4cGjVvpQQokGmGkAuKUUM2/80910703a834a97c79aee5cb601bb577/Panigale-V4-MY18-Red-02-Slider-Gallery-1920x1080.jpg\"\r\n"
 					+ "				class=\"img-responsive\" style=\"width: 100%\" alt=\"Image\">";
 			s += "</div>";
-			s += " <div class=\"panelItem-footerCon\"><div class=\"panelItem-footer\">"+ " &euro; " + m.getPrezzo()
-					+ "</div><div class=\"panelItem-footerDx\"><button class=\"btn-buy btn-sel-piu\" type=\"button\" data-toggle=\"tooltip\" data-original-title=\"Remove this user\"><a href=\"#\" class=\"\">Compra</span></a></button></div></div>";
-			s += "</div></div>";
+			s += " <div class=\"panelItem-footerCon\"><div class=\"panelItem-footer\">" + " &euro; " + m.getPrezzo()
+					+ "</div><div class=\"panelItem-footerDx\"><button class=\"btn-buy btn-sel-piu\" type=\"button\" value=\""
+					+ m.getId()
+					+ "\" data-toggle=\"tooltip\" data-original-title=\"Remove this user\" name=\"aggiungiMoto\"><a href=\"#\" class=\"\">Compra</span></a></button></div></div>";
+			s += "</form></div></div>";
 		}
 		return s;
 	}

@@ -5,6 +5,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import java.util.Set;
 
@@ -59,6 +60,9 @@ public class User {
 
 	@Column(name = "role")
 	private TipoUserEnum role;
+
+	@Transient
+	private Set<MotoComposta> carrello;
 
 	public int getId() {
 		return id;
@@ -164,11 +168,23 @@ public class User {
 		this.role = role;
 	}
 
+	public Set<MotoComposta> getCarrello() {
+		return carrello;
+	}
+
+	public void setCarrello(Set<MotoComposta> carrello) {
+		this.carrello = carrello;
+	}
+
+	public void addToCarrello(MotoComposta mc) {
+		this.carrello.add(mc);
+	}
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", email=" + email + ", password=" + password + ", nickname=" + nickname + ", nome=" + nome + ", cognome="
-				+ cognome + ", eta=" + eta + ", indirizzo=" + indirizzo + ", foto=" + foto + ", dataIscrizione=" + dataIscrizione
-				+ ", listMoto=" + listMoto + ", credito=" + credito + "]";
+		return "User [id=" + id + ", email=" + email + ", password=" + password + ", nickname=" + nickname + ", nome="
+				+ nome + ", cognome=" + cognome + ", eta=" + eta + ", indirizzo=" + indirizzo + ", foto=" + foto
+				+ ", dataIscrizione=" + dataIscrizione + ", listMoto=" + listMoto + ", credito=" + credito + "]";
 	}
 
 }

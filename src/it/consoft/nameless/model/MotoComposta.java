@@ -68,6 +68,10 @@ public class MotoComposta {
 		this.listComponenti = listComponenti;
 	}
 
+	public void addComponente(Componente c) {
+		this.listComponenti.add(c);
+	}
+
 	@Override
 	public String toString() {
 		return "MotoComposta [id=" + id + ", user=" + user + ", moto=" + moto + ", listComponenti=" + listComponenti

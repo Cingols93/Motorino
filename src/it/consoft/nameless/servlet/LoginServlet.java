@@ -21,7 +21,6 @@ public class LoginServlet extends HttpServlet {
 	private static final Logger logger = Logger.getLogger(LoginServlet.class.getName());
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("LOGIN");
 		User user = (User) request.getSession().getAttribute("user");
 		MotoManager.filler();
 		ComponenteManager.filler();
